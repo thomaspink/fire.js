@@ -1,7 +1,7 @@
 //! Fire.js
 // The litte DOM Helper for Javascript-Nerds
 //
-// Version 0.1
+// Version 0.4
 // MIT licensed
 // 
 // Copyright (C) 2013 Thomas Pink
