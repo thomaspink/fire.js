@@ -97,6 +97,13 @@
 				
 		}
 		
+		if(!document.extendedWithFire) {
+			var createElement = document.createElement;
+			document.createElement = function() {
+				return self.extend( createElement.apply( document, arguments ) );
+			}
+		}
+		
 		//! add new Functions
 		elem.hasClass = function( className ) {
 			return self.hasClass( elem, className );
