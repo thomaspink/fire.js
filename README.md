@@ -20,6 +20,9 @@ Twitter: [twitter.com/thpnk](http://twitter.com/thpnk)
 
 ## Releasenotes
 
+### Version 0.5
+Override createElement function
+
 ### Version 0.4
 Added addClass, removeClass, and hasClass to DOM Elements
 
