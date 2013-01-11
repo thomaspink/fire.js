@@ -24,8 +24,8 @@ Twitter: [twitter.com/thpnk](http://twitter.com/thpnk)
 Added addClass, removeClass, and hasClass to DOM Elements
 
 ### Version 0.3
-Support for getElementsByClassName in all Browsers
-Usage of native function if supported, else (IE8 and below) use Polyfill
+Support for getElementsByClassName in all Browsers!
+Using native function if supported, else (IE8 and below) use Polyfill.
 
 ### Version 0.2:
 Override basic selector functions (getElementById, getElementsByTagName)
