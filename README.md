@@ -9,6 +9,9 @@ Include Fire.js in your html-file -> Done.
 <script src="your/path/fire.js"></script>
 ```
 
+## Demo
+Check the included index.html file for some demos
+
 
 ## Stay in Touch / Contact
 Thomas Pink
