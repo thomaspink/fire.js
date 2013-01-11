@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Fire.js Examples</title>
+
+		<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport'>
+		<meta http-equiv="cleartype" content="on">
+		
+		<link href="fonts.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+		
+		<script src="fire.js"></script>
+	</head>
+	
+	<body>
+		
+		<article class="container">
+			<header>
+				<h1 class="font-big"><span class="font-fat">Fire</span>.js</h1>
+				<blockquote class="quote">The litte DOM Helper for Javascript-Nerds, <br>who don't need big DOM-Frameworks to do stuff!</blockquote>
+			</header>
+			
+			<article>
+				<h2 class="font-mid font-fat">addClass, removeClass and hasClass</h2>
+				<p>Fire.js adds functionality for adding and removing Classes of DOM Elements.<br>
+					You also can check if an Element has a Class.<br>
+					Check the code below to see how simple it is.
+				</p>
+				<figure>
+					<figcaption>
+						Example:
+					</figcaption>
+					<pre><code>var elem = document.getElementById("elem1");
+setTimeout(function(){
+	if(elem.hasClass("active")) {
+		elem.removeClass("active");
+	} else {
+		elem.addClass("active");
+	}
+},1000);</code></pre>
+				</figure>
+				<div id="elem1" class="default-box"></div>
+				
+				<!-- Example Code - Start -->
+				<script>
+					var elem1 = document.getElementById("elem1");
+					setInterval(function(){
+						if(elem1.hasClass("active")) {
+							elem1.removeClass("active");
+						} else {
+							elem1.addClass("active");
+						}
+					},1200);
+				</script>
+				<!-- Example Code - End -->
+			</article>
+			
+			<article>
+				<h2 class="font-mid font-fat">multiple Elements</h2>
+				<p>Fire.js also works, if you want to select multiple Elements (for example: getElementsByTagName())</p>
+				<figure>
+					<figcaption>
+						Example:
+					</figcaption>
+					<pre><code>var elems = document.getElementsByTagName("div");
+setTimeout(function(){
+	if(elems.hasClass("active")) {
+		elems.removeClass("active");
+	} else {
+		elems.addClass("active");
+	}
+},1000);</code></pre>
+				</figure>
+				<label class="default-box"></label>
+				<label class="default-box"></label>
+				<label class="default-box"></label>
+				<label class="default-box"></label>
+				
+				<!-- Example Code - Start -->
+				<script>
+					var elements1 = document.getElementsByTagName("label");
+					setInterval(function(){
+						if(elements1.hasClass("active")) {
+							elements1.removeClass("active");
+						} else {
+							elements1.addClass("active");
+						}
+					},1200);
+				</script>
+				<!-- Example Code - End -->
+			</article>
+			
+			<article>
+				<h2 class="font-mid font-fat">getElementsByClassName</h2>
+				<p>This Framework adds a getElementsByClassName Function to DOM Elements, if this function does not exist (older browser like IE8,...).
+				<figure>
+					<figcaption>
+						Example:
+					</figcaption>
+					<pre><code>var elems = document.getElementsByClassName("div");
+setTimeout(function(){
+	if(elems.hasClass("active")) {
+		elems.removeClass("active");
+	} else {
+		elems.addClass("active");
+	}
+},1000);</code></pre>
+				</figure>
+				<div class="default-box class1"></div>
+				<div class="default-box class1"></div>
+				<div class="default-box class1"></div>
+				<div class="default-box class1"></div>
+				
+				<!-- Example Code - Start -->
+				<script>
+					var elements2 = document.getElementsByClassName("class1");
+					setInterval(function(){
+						if(elements2.hasClass("active")) {
+							elements2.removeClass("active");
+						} else {
+							elements2.addClass("active");
+						}
+					},1200);
+				</script>
+				<!-- Example Code - End -->
+			</article>
+			
+		</article>
+		
+		
+	</body>
+
+</html>
