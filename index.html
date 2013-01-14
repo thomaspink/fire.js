@@ -1,36 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Fire.js : Fire.js - The litte DOM Helper for Javascript-Nerds" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fire.js by thomaspink</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Fire.js</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Fire.js</h1>
+        <p class="header">Fire.js - The litte DOM Helper for Javascript-Nerds</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/thomaspink/fire.js">View on GitHub</a>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/thomaspink/fire.js/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/thomaspink/fire.js/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/thomaspink/fire.js">View On GitHub</a></li>
+        </ul>
 
-          <h1 id="project_title">Fire.js</h1>
-          <h2 id="project_tagline">Fire.js - The litte DOM Helper for Javascript-Nerds</h2>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/thomaspink">thomaspink</a></p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/thomaspink/fire.js/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/thomaspink/fire.js/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      </header>
+      <section>
         <h1>Fire.js</h1>
 
 <p>Fire.js - The litte DOM Helper for Javascript-Nerds</p>
@@ -49,6 +48,44 @@
 <p>Fire.js adds functionality for adding and removing Classes of DOM Elements.
 You also can check if an Element has a Class.
 Check the code below to see how simple it is.</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"elem1"</span><span class="p">);</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">elem</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">elem</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">},</span><span class="mi">1000</span><span class="p">);</span>
+</pre></div>
+
+<h3>multiple Elements</h3>
+
+<p>Fire.js also works, if you want to select multiple Elements (for example: getElementsByTagName())</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">elems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"div"</span><span class="p">);</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">elems</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">elems</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">elems</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">},</span><span class="mi">1000</span><span class="p">);</span>
+</pre></div>
+
+<h3>getElementsByClassName</h3>
+
+<p>This Framework adds a getElementsByClassName Function to DOM Elements, if this function does not exist (older browser like IE8,...).</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">elems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">"div"</span><span class="p">);</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">elems</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">elems</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">elems</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">},</span><span class="mi">1000</span><span class="p">);</span>
+</pre></div>
 
 <h2>Demo</h2>
 
@@ -82,17 +119,11 @@ Using native function if supported, else (IE8 and below) use Polyfill.</p>
 
 <p>Basic Logic to extend DOM Elements with custom functions</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Fire.js maintained by <a href="https://github.com/thomaspink">thomaspink</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
-
-    
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>
