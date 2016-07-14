@@ -1,5 +1,7 @@
-Fire.js
-=======
+### OUTDATED!
+Who need DOM Libraries these days ;)
+
+# Fire.js
 
 Fire.js - The litte DOM Helper for Javascript-Nerds
 
