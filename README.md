@@ -1,5 +1,5 @@
 ### OUTDATED!
-Who need DOM Libraries these days ;)
+Who needs DOM Libraries these days ;)
 
 # Fire.js
 
